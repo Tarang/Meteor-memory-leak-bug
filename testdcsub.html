@@ -1,0 +1,31 @@
+<head>
+  <title>testdcsub</title>
+</head>
+
+<body>
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <table class="table table-bordered">
+  <thead>
+  	<th>Updated</th>
+  	<th>User agent</th>
+  	<th>IP</th>
+  	<th>Connection ID</th>
+  	<th>Protocol</th>
+  </thead>
+  	<tbody>
+  	{{#each socks}}
+
+  	<tr>
+	  	<td>{{updated}}</td>
+	  	<td>{{ua}}</td>
+	  	<td>{{ip}}</td>
+	  	<td>{{sid}}</td>
+	  	<td>{{protocol}}</td>
+  	</tr>
+  	{{/each}}
+  	</tbody>
+  </table>
+</template>
